@@ -25,3 +25,28 @@
 .paginaPrincipal footer{
     grid-area: piePagina;
 }
+
+.paginaPrincipal article p{
+    font-family: 'Mynerve', cursive;
+}
+.paginaPrincipal article p:hover{
+    color: red;
+    background-color: lightblue;
+    font-size: 18px;
+    cursor: pointer;
+}
+.paginaPrincipal nav ul li a{
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+    word-spacing: 20px;
+    text-decoration: none;
+    height: 25px;
+    padding: 25px;
+}
+.paginaPrincipal nav ul li a:hover{
+    color: white;
+    background-color: #000000;
+    border-bottom: 2px solid #6d6d6d;
+    box-shadow: 10px 5px 16px -5px #ff0000;
+}

@@ -10,7 +10,172 @@
         let nombreMascota= 'Pelusa';
         let edad=20;
         let mayorEdad=true;//false
+
         const EDAD_MAXIMA=18;
+
+        let lista = [9,8,7,6,5,4];
+        let persona ={
+            nombre:'Johan',
+            apellido:'Fonseca',
+            edad: 30,
+            mayorEdad: true,
+            jobs:['Cine','Desarrollo de software','Videojuegos'],
+            experienciaLabora:{
+                empresa1: '5 años',
+                empresa2: '1 año',
+        }
+    };
+    console.log(persona.nombre, persona.jobs[1], persona.experienciaLabora.empresa1);
+
+        let personas=[
+            {nombre:'Johan', apellido: 'Fonseca', edad:30},
+            {nombre:'Fabian', apellido: 'Gutierrez', edad:18},
+            {nombre:'Pedro', apellido: 'Pesca', edad:48},
+            {nombre:'Alta', apellido: 'Ramirez', edad:15},
+            {nombre:'Dios', apellido: 'Berbena', edad:10}
+        ];
+        for(let index=0;index < personas.length;index++){
+            let persona= personas[index];
+            if(persona.edad>=18){
+                console.log(persona.nombre, ' es mayor de edad');
+            }
+            else{
+                console.log(persona.nombre, ' es menor de edad');
+            }
+        }
+        console.log('While----------------------')
+        let index=0;
+        while(index<personas.length){
+            let persona=personas[index];
+            if(persona.edad>=18){
+                console.log(persona.nombre, ' es mayor de edad');
+            }
+            else{
+                console.log(persona.nombre, ' es menor de edad');
+            }
+            index++;
+        }
+    
+        console.log('While----------------------')
+        index=0;
+        let estado=true;
+        while(estado){
+            let persona=personas[index];
+            if(persona.edad>=18){
+                console.log(persona.nombre, ' es mayor de edad');
+            }
+            else{
+                console.log(persona.nombre, ' es menor de edad');
+            }
+            index++;
+            if(index == personas.length){
+                //estado=false;
+                break;
+            }
+        }
+        console.log('Do while--------------');
+        index=0;
+        do{
+            let persona=personas[index];
+            if(persona.edad>=18){
+                console.log(persona.nombre, ' es mayor de edad');
+            }
+            else{
+                console.log(persona.nombre, ' es menor de edad');
+            }
+            index++;
+        }while(index<personas.length);
+
+        console.log('For | in----------------------');
+        for(let index in personas){
+            let persona=personas[index];
+            if(persona.edad>=18){
+                console.log(persona.nombre, ' es mayor de edad');
+            }
+            else{
+                console.log(persona.nombre, ' es menor de edad');
+            }
+        }
+        console.log('For | of----------------------');
+        for(let persona of personas){
+          
+            if(persona.edad>=18){
+                console.log(persona.nombre, ' es mayor de edad');
+            }
+            else{
+                console.log(persona.nombre, ' es menor de edad');
+            }
+        }
+        console.log('Foreach----------------------');
+        personas.forEach((persona,index)=>{
+            if(persona.edad>=18){
+                console.log(persona.nombre,' es mayor de edad')
+            }
+            else{
+                console.log(persona.nombre, ' es menor de edad')
+            }
+
+        });
+
+        console.log(' ----------------------------');
+        let opcion='A';
+        switch(opcion){
+            case 'A':
+                //codigoxd
+                break;
+            case 'B':
+                //codigoxd
+                break;
+            default:
+                //codigoxd
+                break;
+
+        }
+
+            //&& (expe 1 && expe 2)
+            //|| (expe 1 || expe 2)
+            //! !(exp 1)
+
+            // > mayor
+            // < menor
+            // <= menor o igual
+            // >= mayor o igual
+            // != diferente
+            // == igual
+            // === igual en valor y tipo de variable
+
+            console.log('Expr 1: ', ('5'==5));
+            console.log('Expr 2: ', ('5'===5));
+
+            function validarEdad(edad){
+                if(edad>=18){
+                console.log('La persona es mayor de edad');
+            } else {
+                console.log('La persona es menor de edad');
+            }    
+     }
+        validarEdad(20);
+
+        function esMayorEdad(edad){
+            return edad>=18?'La persona es mayor de edad':
+                            'La persona es menor de edad';
+        }
+        console.log(esMayorEdad(17));
+
+        let  validarEdad2= function (edad){
+            if(edad>=18){
+                console.log('La persona es mayor de edad');
+            } else {
+                console.log('La persona es menor de edad');
+            } 
+        }
+        validarEdad2(30);
+
+        let esMayorEdad2=(edad)=>{
+            return edad>=18?'Si es mayor edad':'Es menor de edad';
+        }
+        console.log(esMayorEdad2(25));
+
         console.log('Hola '+ nombrePersona+''+ nombrePersona+'!!!');
         console.log('Hola'+ nombreMascota +'!!!');
     </script>

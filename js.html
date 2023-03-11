@@ -178,6 +178,50 @@
 
         console.log('Hola '+ nombrePersona+''+ nombrePersona+'!!!');
         console.log('Hola'+ nombreMascota +'!!!');
+    
+        class Persona{
+            nombre='';
+            apellido='';
+            edad=0;
+            email='';
+
+            getNombreCompleto(){
+                return this.nombre + '' + this.apellido;
+            }
+
+            esMayorEdad(){
+               // if(this.edad>=18){
+                 //   return 'Si';
+                //}else{
+                  //      return 'no';
+                    //}
+                    return this.edad>=18 ? 'Si' : 'no';
+                }
+            }
+        
+            let persona1 = new Persona();
+            persona1.nombre='Fabi';
+            persona1.apellido='Gutierrez'
+            persona1.edad=30;
+            console.log('Nombre de la persona: ',persona1.getNombreCompleto());
+            console.log('Es mayor de edad?', persona1.esMayorEdad());
+
+            class Estudiante extends persona{
+                codigo= '';
+                cantidadMaterias=0;
+            }
+
+            class Docente extends persona{
+                codigo='';
+                
+            }
+    
+                let estudiante1= new Estudiante;
+                estudiante1.nombre='Mati';
+                estudiante1.apellido='diaz';
+                estudiante1.codigo='12345';
+                estudiante1.cantidadMaterias=7;
+                console.log('Nombre de la persona: ',estudiante1.getNombreCompleto());
     </script>
 </head>
 <body>
